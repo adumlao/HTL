@@ -36,4 +36,24 @@
   </div>
 
   <div class ="blue"></div>
+
+  <script type="text/javascript">
+    const pic = document.querySelector('.red');
+
+    const bounding = pic.getBoundingClientRect();
+
+
+    const inView = () => {
+      if (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      ) {
+        console.log('In the viewport!');
+      };
+    };
+
+    setInterval(inView, 2000);
+  </script>
 </body>
