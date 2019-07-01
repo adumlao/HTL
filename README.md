@@ -18,13 +18,14 @@
 - ```<script src=”http://example.com/whatever.js”></script>``` : points to an external script file
 - ```<script>var whatever = true</script>``` : declares the script to run
 8. What is the difference between these two javascript snippets?
--  ```var x = function()
+```var x = function()
   { return 1+1;
   }();
-  ``` : calls back function x and will run it, returning 2.
-- ```
+```  
+- calls back function x and will run it, returning 2.
+```
   var y = function()
   { return 1+1;
   };
-  ```
-  : does not call back function y and will not run it.
+```
+- does not call back function y and will not run it.
